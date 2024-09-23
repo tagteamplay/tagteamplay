@@ -1,3 +1,94 @@
+/* Base font-family and general styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #fff; /* Assuming a dark background for a Black Ops feel */
+    background-color: #111; /* Dark, gritty background */
+}
+
+/* Headings (Oswald for bold, military/tactical look) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; /* Strong and bold */
+    text-transform: uppercase; /* Adds to the tactical vibe */
+    letter-spacing: 1px;
+    color: #f1f1f1; /* Light gray text for contrast */
+}
+
+/* Paragraphs (Roboto for clean readability) */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #e0e0e0; /* Slightly lighter than the body text */
+}
+
+/* Links */
+a {
+    color: #007bff; /* A tactical blue for action elements */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffcc00; /* Pop of gold on hover for interaction */
+}
+
+/* Blockquotes (Monoton for a futuristic, digital look) */
+blockquote {
+    font-family: 'Monoton', cursive;
+    font-size: 24px;
+    color: #ffcc00; /* Highlighted text in gold */
+    border-left: 4px solid #ffcc00;
+    padding-left: 16px;
+    margin-left: 0;
+    background-color: #222; /* Subtle contrast to main background */
+}
+
+/* Buttons (Oswald for strong CTA) */
+.btn {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffcc00; /* Match the hover style with the links */
+    color: #111;
+}
+
+/* Navigation */
+.navbar, .nav-link {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.navbar-brand {
+    font-family: 'Monoton', cursive;
+    color: #ffcc00; /* Futuristic logo styling */
+    font-size: 24px;
+}
+
+/* Cards */
+.card-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+}
+
 .img-fixed-height {
     height: 200px; /* Set the desired fixed height */
     width: auto;   /* Ensure width adjusts to maintain aspect ratio */
