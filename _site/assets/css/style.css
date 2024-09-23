@@ -1,92 +1,117 @@
-/* Base font-family and general styling */
+
+/* General styles for layout */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #fff; /* Assuming a dark background for a Black Ops feel */
-    background-color: #111; /* Dark, gritty background */
+    background-color: #1c1c1c;
+    color: #cccccc;
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* Headings (Oswald for bold, military/tactical look) */
-h1, h2, h3, h4, h5, h6 {
+h2 {
     font-family: 'Oswald', sans-serif;
-    font-weight: 700; /* Strong and bold */
-    text-transform: uppercase; /* Adds to the tactical vibe */
-    letter-spacing: 1px;
-    color: #f1f1f1; /* Light gray text for contrast */
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
-/* Paragraphs (Roboto for clean readability) */
+h5 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #e0e0e0; /* Slightly lighter than the body text */
+    font-family: 'Roboto Mono', monospace;
+    color: #cccccc;
+    line-height: 1.6;
 }
 
-/* Links */
-a {
-    color: #007bff; /* A tactical blue for action elements */
-    text-decoration: none;
+.container {
+    margin-top: 30px;
 }
 
-a:hover {
-    color: #ffcc00; /* Pop of gold on hover for interaction */
+/* Card styles */
+.card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #333;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Blockquotes (Monoton for a futuristic, digital look) */
-blockquote {
-    font-family: 'Monoton', cursive;
-    font-size: 24px;
-    color: #ffcc00; /* Highlighted text in gold */
-    border-left: 4px solid #ffcc00;
-    padding-left: 16px;
-    margin-left: 0;
-    background-color: #222; /* Subtle contrast to main background */
+/* Cut corners on top-left and bottom-right */
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #1c1c1c;
 }
 
-/* Buttons (Oswald for strong CTA) */
-.btn {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.card::before {
+    top: -1px;
+    left: -1px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-.btn:hover {
-    background-color: #ffcc00; /* Match the hover style with the links */
-    color: #111;
+.card::after {
+    bottom: -1px;
+    right: -1px;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
 }
 
-/* Navigation */
-.navbar, .nav-link {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #e0e0e0;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.navbar-brand {
-    font-family: 'Monoton', cursive;
-    color: #ffcc00; /* Futuristic logo styling */
-    font-size: 24px;
-}
-
-/* Cards */
 .card-title {
     font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    color: #ffcc00;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .card-text {
-    font-family: 'Roboto', sans-serif;
-    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+    color: #cccccc;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff9800;
+}
+
+/* Image styles */
+.img-fixed-height {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+/* White accents and borders */
+.card-body {
+    border-top: 1px solid #ffffff;
+}
+
+blockquote {
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    background-color: #333;
+    padding: 15px;
+    border-left: 5px solid #ff9800;
+    margin: 20px 0;
 }
 
 .img-fixed-height {
