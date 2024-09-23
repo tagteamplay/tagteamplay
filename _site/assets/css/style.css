@@ -1,0 +1,5 @@
+.img-fixed-height {
+    height: 200px; /* Set the desired fixed height */
+    width: auto;   /* Ensure width adjusts to maintain aspect ratio */
+    object-fit: cover; /* Crop the image to fit the container while maintaining quality */
+}
